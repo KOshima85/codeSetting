@@ -1,0 +1,80 @@
+{
+	// Place your snippets for php here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"logger":{"prefix": "logger",
+		"body": [
+			"logger($1);"
+		],
+		"description": "logger"
+	},
+	"larabel logger": {
+		"prefix": "logger(__CLASS__.__LINE__)",
+		"body": [
+			"logger(__CLASS__ . ':' .__LINE__);"
+		],
+		"description": "ファイルと行数を出力するログ"
+	},
+	"larabel logger_metod": {
+		"prefix": "logger(__METHOD__.__LINE__)",
+		"body": [
+			"logger(__METHOD__ . ':' .__LINE__);"
+		],
+		"description": "ファイルと行数を出力するログ"
+	},
+	"create constructor":{
+		"prefix": "__construct",
+		"body": ["/**"
+		,"* constructor."
+		,"*/"
+	    ,"public function __construct()"
+	    ,"{"
+		,"\tparent::__construct();"
+		,"\t// code ..."
+		,"}"]
+	},
+	"create public function":{
+		"prefix": "public-function",
+		"body": [
+			"public function ${1:method}(){"
+			,"\t${2://code...}"
+			,"}"]
+	},
+	"create private function":{
+		"prefix": "private-function",
+		"body": [
+			"private function ${1:method}(){"
+			,"\t${2://code...}"
+			,"}"]
+	},
+	"create protect function":{
+		"prefix": "protected-function",
+		"body": [
+			"protected function ${1:method}(){"
+			,"\t${2://code...}"
+			,"}"]
+	},
+	"try-catch":{
+		"prefix": "try-catch",
+		"body": [
+			"try{\n\t${1:// code...}",
+			"}catch(\\Exception $$ex) {",
+			"\n}"
+		]
+	},
+	"create-echo-line":{
+		"prefix": "echo__file__",
+		"body": "echo __FILE__.\":\".__LINE__.PHP_EOL;"
+	}
+}

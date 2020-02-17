@@ -1,0 +1,65 @@
+{
+    // "files.trimTrailingWhitespace": true,
+    "editor.renderControlCharacters": true,
+    "php.suggest.basic": false,
+    "sftp.printDebugLog": true,
+    "markdown.preview.breaks": true,
+    "editor.renderWhitespace": "all",
+    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
+    "todo-tree.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.customHighlight": {
+        "TODO": {},
+        "FIXME": {},
+        "O-TODO": {}
+    },
+    "explorer.confirmDragAndDrop": false,
+    "todo-tree.tags": [
+        "TODO",
+        "FIXME",
+        "O-TODO"
+    ],
+    "todohighlight.keywords": [
+        "TODO",
+        "FIXME",
+        "O-TODO"
+    ],
+    "window.zoomLevel": 0,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "breadcrumbs.enabled": true,
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "workbench.iconTheme": "vs-nomo-dark",
+    "editor.minimap.enabled": true,
+    "vim.useSystemClipboard": true,
+    "atlascode.jira.workingSite": {
+        "baseUrlSuffix": "atlassian.net"
+    },
+    "yaml.schemas": {
+    },
+    "atlascode.jira.statusbar.enabled": false,
+    "workbench.activityBar.visible": true,
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {},
+        "FIXME": {},
+        "O-TODO": {}
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "O-TODO"
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[php]": {},
+    "diffEditor.ignoreTrimWhitespace": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 6
+}

@@ -1,0 +1,152 @@
+{
+	// Place your snippets for json here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"openapi schema:object-property":{
+		"prefix": "openApi schema: object property",
+		"body":[
+			"\"$1\":{",
+			"\t\"type\": \"$2\",",
+			"\t\"example\": \"$3\"",
+			"\t\"required\":[",
+			"\t\t$4",
+			"\t]",
+			"},"
+		]
+	},
+
+	"openapi schema:string property":{
+		"prefix": "openApi schema: string",
+		"body":[
+			"\"$1\":{",
+			"\t\"type\": \"string\",",
+			"\t\"description\": \"${2}\",",
+			"\t\"example\": \"${3:string_value}\"",
+			"},"
+		]
+	},
+
+	"openapi schema:integer property":{
+		"prefix": "openApi schema: intger",
+		"body":[
+			"\"$1\":{",
+			"\t\"type\": \"integer\",",
+			"\t\"description\": \"${2}\",",
+			"\t\"example\": ${3:1}",
+			"},"
+		]
+	},
+
+	"openapi schema:object":{
+		"prefix": "openApi schema: object",
+		"body":[
+			"\"$1\":{",
+			"\t\"type\": \"object\",",
+			"\t\"properties\":{",
+			"\t\t$2",
+			"\t}",
+			"},",
+		]
+	},
+
+	"openapi schema:content application/json":{
+		"prefix": "openApi schema: content application/json",
+		"body":[
+			"\"content\" : {",
+			"\t\"application/json\" : {",
+			"\t\t\"schema\" : {",
+			"\t\t\t\"type\": \"object\",",
+			"\t\t\t\"properties\": {",
+			"\t\t\t\t\t$1",
+			"\t\t\t}",
+			"\t\t}",
+			"\t}",
+			"}",
+			],
+		"description": "openApi のapplication/json content"
+	},
+
+	"openapi schema:requestBody":{
+		"prefix": "openApi schema:requestBody",
+		"body":[
+			"\"requestBody\" : {",
+			"\t$1",
+			"},",
+		],
+		"description": "openApi のrequestBodyテンプレート"
+	},
+
+	"openapi schema:response":{
+		"prefix": "openApi schema:response",
+		"body":[
+			"\"responses\" : {",
+			"\t\"200\" : {",
+			"\t\t\"description\":\"\"",
+			"\t\t$1",
+			"\t},",
+			"\t\"400\" : {",
+			"\t\t\"description\":\"\"",
+			"\t\t$2",
+			"\t}",
+			"}",
+		],
+		"description": "openApi のresponseテンプレート"
+	},
+
+
+	"openapi $ref:schemas":{
+		"prefix":"openapi $ref:schemas",
+		"body": [
+			"\"\\$ref\" : \"#/components/schemas/$1\""
+		]
+	},
+
+	"openapi post":{
+		"prefix": "openapi post",
+		"body": [
+			"{",
+			"\t\"/$1\":{",
+			"\t\t\"post\":{",
+			"\t\t\t\"tags\": [$6],",
+			"\t\t\t\"summary\": \"$7\",",
+            "\t\t\t\"description\":\"$2\",",
+			"\t\t\t\"operationId\": \"$1\",",
+			"\t\t\t\"parameters\": [],",
+
+            "\t\t\t\"security\" : [ {",
+            "\t\t\t\t\"tokenAuth\" : [ ]",
+            "\t\t\t} ],",
+
+			"\t\t\t\"requestBody\" : {",
+			"\t\t\t\t${3:content}",
+			"\t\t\t},",
+
+			"\t\t\t\"responses\" : {",
+			"\t\t\t\t\"200\" : {",
+			"\t\t\t\t\t\"description\":\"\"",
+			"\t\t\t\t\t${4:content}",
+			"\t\t\t\t},",
+			"\t\t\t\t\"400\" : {",
+			"\t\t\t\t\t\"description\":\"\"",
+			"\t\t\t\t\t${5:content}",
+			"\t\t\t\t}",
+			"\t\t\t},",
+
+			"\t\t},",
+			"\t}",
+			"}",
+		]
+	}
+
+}
