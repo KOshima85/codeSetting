@@ -1,5 +1,4 @@
 {
-    // "files.trimTrailingWhitespace": true,
     "editor.renderControlCharacters": true,
     "php.suggest.basic": false,
     "sftp.printDebugLog": true,
